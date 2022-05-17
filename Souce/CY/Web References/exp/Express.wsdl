@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="express" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="express" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="express">
+      <s:element name="InsertExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="expNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sale" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrivedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitprice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="coin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalcoin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalvalue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pcs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="predictdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comidyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="delivery" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipcity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fh_user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serverid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="chargetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createuser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="youhui" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_pre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_descop" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="density" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_values" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertExpressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SecurityHeader" type="tns:SecurityHeader" />
+      <s:complexType name="SecurityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SecurityKey" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="Sh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ShResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="expId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sale" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrivedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitprice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalcoin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalvalue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pcs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comidyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="delivery" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipcity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_coin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_rate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fh_user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serverid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="chargetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastuser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="closedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="youhui" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serverjine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_descop" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="density" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_values" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateExpressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExp_Rec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_countryid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_addr1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_addr2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_skype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExp_RecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertExp_RecResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkExp_No">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exp_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkExp_NoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChkExp_NoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExp_Rec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_countryid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_addr1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_addr2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_skype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExp_RecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateExp_RecResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cust_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="saleid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp_pre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bLC" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpress1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExpNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpress1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpress1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLiRun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cust_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="saleid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isPaid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boxno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLiRunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLiRunResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFenHuo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cust_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="saleid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fenhuoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deliveryid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iSend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFenHuoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFenHuoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelExpressResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upfilebyte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upfilebyteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upfilebyteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="downfilebyte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="downfilebyteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="downfilebyteResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressRec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressRecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressRecResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Marks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnBoxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BoxNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoxOut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtBox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtQG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtDG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtPS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ddka" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gkdz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="efgk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Yjqg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Msk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xbly" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Yk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YEKCK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ka" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="efdz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoxOut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtBox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtQG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtDG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtPS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ddka" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gkdz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="efgk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Yjqg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Msk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xbly" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Yk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YEKCK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ka" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="efdz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="delBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BoxIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boxno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BoxInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BoxInResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boxno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GexExpBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="boxno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GexExpBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GexExpBoxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExpress" />
+  </wsdl:message>
+  <wsdl:message name="InsertExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExpressResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExpressSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ShSoapIn">
+    <wsdl:part name="parameters" element="tns:Sh" />
+  </wsdl:message>
+  <wsdl:message name="ShSoapOut">
+    <wsdl:part name="parameters" element="tns:ShResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateExpress" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateExpressResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExpressSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertExp_RecSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExp_Rec" />
+  </wsdl:message>
+  <wsdl:message name="InsertExp_RecSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExp_RecResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExp_RecSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChkExp_NoSoapIn">
+    <wsdl:part name="parameters" element="tns:ChkExp_No" />
+  </wsdl:message>
+  <wsdl:message name="ChkExp_NoSoapOut">
+    <wsdl:part name="parameters" element="tns:ChkExp_NoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChkExp_NoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExp_RecSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateExp_Rec" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExp_RecSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateExp_RecResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExp_RecSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpress" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetExpress1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpress1" />
+  </wsdl:message>
+  <wsdl:message name="GetExpress1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpress1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetExpress1SecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLiRunSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLiRun" />
+  </wsdl:message>
+  <wsdl:message name="GetLiRunSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLiRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLiRunSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFenHuoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFenHuo" />
+  </wsdl:message>
+  <wsdl:message name="GetFenHuoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFenHuoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFenHuoSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="DelExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:DelExpress" />
+  </wsdl:message>
+  <wsdl:message name="DelExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:DelExpressResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelExpressSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="upfilebyteSoapIn">
+    <wsdl:part name="parameters" element="tns:upfilebyte" />
+  </wsdl:message>
+  <wsdl:message name="upfilebyteSoapOut">
+    <wsdl:part name="parameters" element="tns:upfilebyteResponse" />
+  </wsdl:message>
+  <wsdl:message name="upfilebyteSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="downfilebyteSoapIn">
+    <wsdl:part name="parameters" element="tns:downfilebyte" />
+  </wsdl:message>
+  <wsdl:message name="downfilebyteSoapOut">
+    <wsdl:part name="parameters" element="tns:downfilebyteResponse" />
+  </wsdl:message>
+  <wsdl:message name="downfilebyteSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressRecSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpressRec" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressRecSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressRecSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUnBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnBox" />
+  </wsdl:message>
+  <wsdl:message name="GetUnBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBox" />
+  </wsdl:message>
+  <wsdl:message name="InsertBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBox" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="delBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:delBox" />
+  </wsdl:message>
+  <wsdl:message name="delBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:delBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="BoxInSoapIn">
+    <wsdl:part name="parameters" element="tns:BoxIn" />
+  </wsdl:message>
+  <wsdl:message name="BoxInSoapOut">
+    <wsdl:part name="parameters" element="tns:BoxInResponse" />
+  </wsdl:message>
+  <wsdl:message name="BoxInSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="UnBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:UnBox" />
+  </wsdl:message>
+  <wsdl:message name="UnBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:UnBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GexExpBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:GexExpBox" />
+  </wsdl:message>
+  <wsdl:message name="GexExpBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:GexExpBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GexExpBoxSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:portType name="ExpressSoap">
+    <wsdl:operation name="InsertExpress">
+      <wsdl:input message="tns:InsertExpressSoapIn" />
+      <wsdl:output message="tns:InsertExpressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sh">
+      <wsdl:input message="tns:ShSoapIn" />
+      <wsdl:output message="tns:ShSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpress">
+      <wsdl:input message="tns:UpdateExpressSoapIn" />
+      <wsdl:output message="tns:UpdateExpressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExp_Rec">
+      <wsdl:input message="tns:InsertExp_RecSoapIn" />
+      <wsdl:output message="tns:InsertExp_RecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkExp_No">
+      <wsdl:input message="tns:ChkExp_NoSoapIn" />
+      <wsdl:output message="tns:ChkExp_NoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExp_Rec">
+      <wsdl:input message="tns:UpdateExp_RecSoapIn" />
+      <wsdl:output message="tns:UpdateExp_RecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <wsdl:input message="tns:GetExpressSoapIn" />
+      <wsdl:output message="tns:GetExpressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress1">
+      <wsdl:input message="tns:GetExpress1SoapIn" />
+      <wsdl:output message="tns:GetExpress1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiRun">
+      <wsdl:input message="tns:GetLiRunSoapIn" />
+      <wsdl:output message="tns:GetLiRunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFenHuo">
+      <wsdl:input message="tns:GetFenHuoSoapIn" />
+      <wsdl:output message="tns:GetFenHuoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelExpress">
+      <wsdl:input message="tns:DelExpressSoapIn" />
+      <wsdl:output message="tns:DelExpressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <wsdl:input message="tns:upfilebyteSoapIn" />
+      <wsdl:output message="tns:upfilebyteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <wsdl:input message="tns:downfilebyteSoapIn" />
+      <wsdl:output message="tns:downfilebyteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressRec">
+      <wsdl:input message="tns:GetExpressRecSoapIn" />
+      <wsdl:output message="tns:GetExpressRecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnBox">
+      <wsdl:input message="tns:GetUnBoxSoapIn" />
+      <wsdl:output message="tns:GetUnBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBox">
+      <wsdl:input message="tns:InsertBoxSoapIn" />
+      <wsdl:output message="tns:InsertBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBox">
+      <wsdl:input message="tns:UpdateBoxSoapIn" />
+      <wsdl:output message="tns:UpdateBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delBox">
+      <wsdl:input message="tns:delBoxSoapIn" />
+      <wsdl:output message="tns:delBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxIn">
+      <wsdl:input message="tns:BoxInSoapIn" />
+      <wsdl:output message="tns:BoxInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBox">
+      <wsdl:input message="tns:UnBoxSoapIn" />
+      <wsdl:output message="tns:UnBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GexExpBox">
+      <wsdl:input message="tns:GexExpBoxSoapIn" />
+      <wsdl:output message="tns:GexExpBoxSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExpressSoap" type="tns:ExpressSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertExpress">
+      <soap:operation soapAction="express/InsertExpress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sh">
+      <soap:operation soapAction="express/Sh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ShSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpress">
+      <soap:operation soapAction="express/UpdateExpress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExp_Rec">
+      <soap:operation soapAction="express/InsertExp_Rec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertExp_RecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkExp_No">
+      <soap:operation soapAction="express/ChkExp_No" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChkExp_NoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExp_Rec">
+      <soap:operation soapAction="express/UpdateExp_Rec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateExp_RecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <soap:operation soapAction="express/GetExpress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress1">
+      <soap:operation soapAction="express/GetExpress1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExpress1SecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiRun">
+      <soap:operation soapAction="express/GetLiRun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLiRunSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFenHuo">
+      <soap:operation soapAction="express/GetFenHuo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFenHuoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelExpress">
+      <soap:operation soapAction="express/DelExpress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DelExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <soap:operation soapAction="express/upfilebyte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:upfilebyteSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <soap:operation soapAction="express/downfilebyte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:downfilebyteSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressRec">
+      <soap:operation soapAction="express/GetExpressRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExpressRecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnBox">
+      <soap:operation soapAction="express/GetUnBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUnBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBox">
+      <soap:operation soapAction="express/InsertBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBox">
+      <soap:operation soapAction="express/UpdateBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBox">
+      <soap:operation soapAction="express/delBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:delBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxIn">
+      <soap:operation soapAction="express/BoxIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BoxInSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBox">
+      <soap:operation soapAction="express/UnBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UnBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GexExpBox">
+      <soap:operation soapAction="express/GexExpBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GexExpBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExpressSoap12" type="tns:ExpressSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertExpress">
+      <soap12:operation soapAction="express/InsertExpress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sh">
+      <soap12:operation soapAction="express/Sh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ShSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpress">
+      <soap12:operation soapAction="express/UpdateExpress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExp_Rec">
+      <soap12:operation soapAction="express/InsertExp_Rec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertExp_RecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkExp_No">
+      <soap12:operation soapAction="express/ChkExp_No" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChkExp_NoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExp_Rec">
+      <soap12:operation soapAction="express/UpdateExp_Rec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateExp_RecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress">
+      <soap12:operation soapAction="express/GetExpress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpress1">
+      <soap12:operation soapAction="express/GetExpress1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetExpress1SecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiRun">
+      <soap12:operation soapAction="express/GetLiRun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLiRunSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFenHuo">
+      <soap12:operation soapAction="express/GetFenHuo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFenHuoSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelExpress">
+      <soap12:operation soapAction="express/DelExpress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DelExpressSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <soap12:operation soapAction="express/upfilebyte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:upfilebyteSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <soap12:operation soapAction="express/downfilebyte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:downfilebyteSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressRec">
+      <soap12:operation soapAction="express/GetExpressRec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetExpressRecSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnBox">
+      <soap12:operation soapAction="express/GetUnBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUnBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBox">
+      <soap12:operation soapAction="express/InsertBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBox">
+      <soap12:operation soapAction="express/UpdateBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBox">
+      <soap12:operation soapAction="express/delBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:delBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxIn">
+      <soap12:operation soapAction="express/BoxIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BoxInSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBox">
+      <soap12:operation soapAction="express/UnBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UnBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GexExpBox">
+      <soap12:operation soapAction="express/GexExpBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GexExpBoxSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Express">
+    <wsdl:port name="ExpressSoap" binding="tns:ExpressSoap">
+      <soap:address location="http://webservice.ea-ex.com/express.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExpressSoap12" binding="tns:ExpressSoap12">
+      <soap12:address location="http://webservice.ea-ex.com/express.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

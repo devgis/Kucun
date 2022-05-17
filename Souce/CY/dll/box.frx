@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/19/2014 11:27:48" ReportInfo.Modified="10/19/2014 13:57:33" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqsrEzhd9+T4CJxZj90G866Aze7W5BC+3lA42/GmjqtZt6RYQJROShhOmoeBI3CiR0zHmRJhipb5eHVVis8nADsSXnCKGGCzwlGIzWNNrvW3yZynQkXB4uzBb8UjVIt1uvfgW4acW85G2ms/+woTAzmZ18sD2dtNbDEi9NUd7gH/OAsIx5RBIJdbhgkgKI7JTG">
+      <TableDataSource Name="Table" Alias="box" DataType="System.Int32" Enabled="true" SelectCommand="select * from express  where boxno=@boxno">
+        <Column Name="id" DataType="System.Int32"/>
+        <Column Name="exp_no" DataType="System.String"/>
+        <Column Name="exp_custid" DataType="System.Int32"/>
+        <Column Name="exp_pre" DataType="System.String"/>
+        <Column Name="exp_sale_id" DataType="System.Int32"/>
+        <Column Name="exp_arrive_date" DataType="System.String"/>
+        <Column Name="exp_product_id" DataType="System.Int32"/>
+        <Column Name="exp_delivery" DataType="System.Int32"/>
+        <Column Name="exp_weight" DataType="System.Decimal"/>
+        <Column Name="exp_volweight" DataType="System.Decimal"/>
+        <Column Name="exp_unitprice" DataType="System.Decimal"/>
+        <Column Name="exp_coin" DataType="System.Int32"/>
+        <Column Name="exp_rate" DataType="System.Decimal"/>
+        <Column Name="exp_totalcoin" DataType="System.Decimal"/>
+        <Column Name="exp_totalvalue" DataType="System.Decimal"/>
+        <Column Name="exp_pcs" DataType="System.Int32"/>
+        <Column Name="exp_predict_postdate" DataType="System.String"/>
+        <Column Name="exp_paymode" DataType="System.String"/>
+        <Column Name="exp_commidyname" DataType="System.String"/>
+        <Column Name="exp_desc" DataType="System.String"/>
+        <Column Name="shipcity" DataType="System.String"/>
+        <Column Name="fh_user" DataType="System.Int32"/>
+        <Column Name="serverjine" DataType="System.String"/>
+        <Column Name="serverid" DataType="System.Int32"/>
+        <Column Name="chargetype" DataType="System.String"/>
+        <Column Name="createuser" DataType="System.String"/>
+        <Column Name="createdate" DataType="System.String"/>
+        <Column Name="lastuser" DataType="System.String"/>
+        <Column Name="lastdate" DataType="System.String"/>
+        <Column Name="closedate" DataType="System.String"/>
+        <Column Name="youhui" DataType="System.Decimal"/>
+        <Column Name="boxno" DataType="System.String"/>
+        <CommandParameter Name="boxno" DataType="22" Expression="[boxnum]"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Parameter Name="boxnum" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text3" Left="-9450" Top="-9450" Width="94.5" Height="18.9" Text="装柜日期：" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text1" Left="9.45" Top="9.45" Width="132.3" Height="18.9" Text="流水柜号：S049" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Left="217.35" Top="9.45" Width="170.1" Height="18.9" Text="装柜日期：2014年09月15日" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Left="406.35" Top="9.45" Width="122.85" Height="18.9" Text="装柜日期：星期一" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="557.55" Width="94.5" Height="18.9" Text="[boxnum]" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="103.95" DataSource="Table">
+      <TextObject Name="Text5" Left="9.45" Top="18.9" Width="94.5" Height="18.9" Text="[box.exp_custid]" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="217.35" Top="18.9" Width="141.75" Height="18.9" Text="[box.exp_no]" Font="宋体, 9pt"/>
+      <TextObject Name="boxno" Left="406.35" Top="9.45" Width="94.5" Height="18.9" Text="[box.boxno]" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="567" Top="9.45" Width="94.5" Height="18.9" Font="宋体, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="182.1" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

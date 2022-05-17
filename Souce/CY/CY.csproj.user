@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <PublishUrlHistory>D:\CY\sg\|G:\CY\sg\|F:\CY\share1\|F:\CY\share\|\\WIN-20140216YZA\sd\</PublishUrlHistory>
+    <InstallUrlHistory>http://688664.ichengyun.net/down_znn/|\\192.168.0.118\cy\|\\WIN-20140216YZA\sd\|\\192.168.2.118\cy\|\\WIN-20130225AWF\share\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://688664.ichengyun.net/down_znn/|\\192.168.0.118\cy\|\\192.168.2.118\cy\|\\WIN-20130225AWF\share\</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>zh-CN</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
